@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 gem 'foundation-rails'
 gem 'devise'
+gem 'braintree'
