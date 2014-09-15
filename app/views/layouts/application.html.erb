@@ -12,8 +12,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class='row'>
+      <% if notice %>
+        <p class="success label"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert label"><%= alert %></p>
+      <% end %>
+    </div>
     <div class='row'>
       <%= yield %>
     </div>
