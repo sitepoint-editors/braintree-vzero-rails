@@ -11,8 +11,8 @@ class OrdersController < ApplicationController
       payment_method_nonce: nonce
     )
 
-    flash[:notice] = "Sale successful. Head to Sizzler" if result.success?
-    flash[:alert] = "Something is amiss. #{result.transaction.processor_response_text}" unless result.success?
+    flash[:notice] = "Success! Time, like Nonces, is precious. Use it well." if result.success?
+    flash[:alert] = "The nonces have eaten your sale. #{result.transaction.processor_response_text}" unless result.success?
     redirect_to action: :new
   end
 end
